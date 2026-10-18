@@ -1,0 +1,53 @@
+{
+  "name": "@jiemurat/hyper-second-brain",
+  "version": "1.0.0",
+  "description": "Agent skills that set up and look after a second brain: a vault of notes and documents (for example an Obsidian vault) that AI agents keep in order for you. Installs fourteen skills: hsb-init, hsb-doctor, hsb-update, hsb-place-an-item, hsb-projects, hsb-review, hsb-find, hsb-capture, hsb-distill, hsb-create, hsb-share, hsb-restart, hsb-re-organize and hsb-connect.",
+  "keywords": [
+    "agent-skills",
+    "agents-md",
+    "ai-agents",
+    "claude-code",
+    "codex",
+    "gemini-cli",
+    "antigravity",
+    "cursor",
+    "copilot",
+    "second-brain",
+    "para",
+    "obsidian",
+    "knowledge-management"
+  ],
+  "license": "MIT",
+  "author": "Jiemurat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiemurat/hyper-second-brain.git"
+  },
+  "homepage": "https://github.com/jiemurat/hyper-second-brain#readme",
+  "bugs": {
+    "url": "https://github.com/jiemurat/hyper-second-brain/issues"
+  },
+  "type": "module",
+  "bin": {
+    "hyper-second-brain": "cli/hyper-second-brain.js"
+  },
+  "files": [
+    "cli/",
+    "lib/",
+    "skills/",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "check-build": "node scripts/build.js --check",
+    "validate": "node scripts/validate.js",
+    "test": "node --test",
+    "prepublishOnly": "npm run check-build && npm run validate && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
