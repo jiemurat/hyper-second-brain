@@ -3,7 +3,7 @@ name: hsb-place-an-item
 description: Decides where an item goes in the user's second-brain vault and puts it there. Use it every time you must choose a place for a note or a file: something the user hands over, an item waiting in the Inbox, a note or file you are about to create, or an item whose status changed. To start, finish, or review a project, use hsb-projects; for a weekly or monthly review, or a change in the user's roles or interests, use hsb-review; to find where an item already is, use hsb-find; to judge what is worth keeping, or to keep the key points of an article, a book, or a video, use hsb-capture.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   package: "@jiemurat/hyper-second-brain"
 ---
 

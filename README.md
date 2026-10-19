@@ -1,5 +1,7 @@
 # hyper-second-brain
 
+[![npm](https://img.shields.io/npm/v/@jiemurat/hyper-second-brain)](https://www.npmjs.com/package/@jiemurat/hyper-second-brain) [![downloads](https://img.shields.io/npm/dm/@jiemurat/hyper-second-brain)](https://www.npmjs.com/package/@jiemurat/hyper-second-brain) [![license](https://img.shields.io/npm/l/@jiemurat/hyper-second-brain)](https://github.com/jiemurat/hyper-second-brain/blob/main/LICENSE) [![ci](https://github.com/jiemurat/hyper-second-brain/actions/workflows/ci.yml/badge.svg)](https://github.com/jiemurat/hyper-second-brain/actions/workflows/ci.yml)
+
 Agent skills that set up and look after a second brain: a vault of notes and documents (for example an Obsidian vault) that AI agents keep in order for you. The package writes its general rules for the vault into your project (`HYPER-SECOND-BRAIN.md`), connects them to the agent's instruction files, and its skills set the project up, check it, keep it current, decide where the notes and files that come into the vault go, keep your list of projects, run your weekly and monthly reviews, find what the vault holds, decide what is worth keeping, mark the main points of your notes, turn your notes into finished work, prepare notes for other people, give your notes tags, links and maps of content, and start the vault over when it has become too much.
 
 | Skill | What it does |

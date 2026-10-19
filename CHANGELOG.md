@@ -19,3 +19,10 @@ Released 2026-10-18. First version.
 - `hsb-connect` gives notes tags, typed links (`up`, `related`, `source`, and others the vault needs) and maps of content in their properties without changing their text, by a standard agreed with the user in `hyper-second-brain/tags.md`; its script measures the vault, writes the properties, makes and extends the maps, checks the result and takes a batch back; the rules file asks every skill that creates or places a note to follow the standard.
 - `hsb-re-organize` repairs links written as a full path from an Obsidian vault one folder above the vault, matches names in composed and decomposed Unicode, rewrites links that spell the old letter case of a renamed folder, gives the git commands that record a rename of letter case only when git ignores letter case, keeps its way back in a vault with names in other scripts, names the settings, templates and instruction files that write a folder's old path, leaves out the signs that repeat by design (a year in a title, empty notes, copies of a template, names in many folders, and the user's `Ignore names` and `Not projects` lines), reads compact cards first, and describes folders without moving anything when the user asks; an `_about.md` is written in the vault's main language.
 - The CLI installs, updates, removes and reports the skills (`init`, `update`, `remove`, `status`) next to other agent packages without touching their files; `update` also replaces files of the same version whose content differs, and `status` tells a package that is not on npm from a registry it cannot reach.
+
+## 1.0.1
+
+Released 2026-10-19.
+
+- `hsb-restart`: when the user calls the vault a chaos or a mess without asking to start over, it offers the ways in one message, each with what it asks of the user and what it changes in the vault; for a vault that already follows PARA (each category's folder exists) one way leaves the vault as it is and works from the Project List. When the user picks none, it changes nothing, does not ask about the ways again, and offers a review that is due.
+- The README shows the npm version, monthly downloads, license and CI status as badges at the top.

@@ -7,3 +7,7 @@ Entry format: `## <version>`, one or two sentences on what changed, then numbere
 ## 1.0.0
 
 First version. No migration steps: hsb-init sets a project up at this standard.
+
+## 1.0.1
+
+The hsb-restart skill states the ways it offers more clearly. No migration steps.

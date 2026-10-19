@@ -16,7 +16,7 @@ This skill gives the user a fresh start: it moves everything in the vault's cate
 ## Core rules
 
 1. **Talk in the user's language.** Reports and questions use the user's language; a reason in the script's plan is in the user's language, and a line you write into `project.md` is in English.
-2. **Start over only on the user's yes.** Starting the vault over is asked first (`HYPER-SECOND-BRAIN.md` → "What you may do and what you ask first"): show what moves and what stays, and wait for the yes. When the vault already follows PARA and the user does not ask to start over, move nothing, and offer to work from the user's projects as one of the ways.
+2. **Start over only on the user's yes.** Starting the vault over is asked first (`HYPER-SECOND-BRAIN.md` → "What you may do and what you ask first"): show what moves and what stays, and wait for the yes. When the vault already follows PARA and the user does not ask to start over, move nothing, and offer as one of the ways to leave the vault as it is and work from the user's projects. The vault follows PARA when the folder that the "Folders" table of `project.md` gives each of the four categories exists in the vault; how the folders inside are named does not change that.
 3. **Keep everything.** The move deletes nothing and changes no file; an item comes back by moving it out. It needs a way back from a mistake first: a committed vault or the user's word that a backup exists.
 4. **Rebuild from now, not from the past.** After the move, build the vault from the projects the user works on now; bring old material back only when a project needs it, never in a sweep.
 
@@ -30,11 +30,11 @@ The script runs as `node <skill>/scripts/reorganize.mjs <command> --root <projec
 2. **Know the request.** Decide the job:
    - starting the vault over: `references/restart.md`;
    - getting started, for a new user or one who asks how to begin: `references/getting-started.md`;
-   - the user calls the vault a chaos or a mess and names no job: offer both ways in one message (and, for a vault that already follows PARA, working from the user's projects, as core rule 2 says), with what each costs: `hsb-re-organize` sorts every item and keeps it in place, starting over archives everything at once and rebuilds from the current projects; follow the user's choice, and when the user chooses neither, change nothing.
+   - the user calls the vault a chaos or a mess, or says they cannot face it, and asks neither to start over nor how to begin: such words alone are no request to start over, so offer the ways in one message, each with what it asks of the user and what it changes in the vault: `hsb-re-organize` sorts every item and keeps it in place, and the user approves its plan and answers a question for each unclear item; starting over archives everything at once after one yes, the user answers the questions of a new Project List, and old material comes back only when a project needs it; for a vault that already follows PARA, also the third way of core rule 2: nothing moves, the user answers the questions of the Project List that `hsb-projects` builds or reviews, and the old material stays where it is. Follow the user's choice; when the user chooses none, change nothing.
 
    Done when the request has a job, or the user has the choice.
-3. **Do the job** as its reference says. Done when the job reached the "Done when" of its reference.
-4. **Report.** Write in the chat, in the user's language: what moved and where (the folder's name exactly as written, the count), what stayed in place, the projects the list now holds, for getting started the stage taken and the next one, and the questions at the end. Done when the user has the report.
+3. **Do the job** as its reference says; when the user chose none, go to step 4. Done when the job reached the "Done when" of its reference, or the user chose none.
+4. **Report.** Write in the chat, in the user's language: what moved and where (the folder's name exactly as written, the count), what stayed in place, the projects the list now holds, for getting started the stage taken and the next one, and the questions at the end. When the user chose none of the ways, say that nothing changed and that the user can pick a way later, without listing the ways or asking about them again. A review that is due comes after the questions, as `HYPER-SECOND-BRAIN.md` → "What you may do and what you ask first" says, also when nothing moved. Done when the user has the report.
 
 ## Files and when to read them
 

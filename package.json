@@ -1,6 +1,6 @@
 {
   "name": "@jiemurat/hyper-second-brain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Agent skills that set up and look after a second brain: a vault of notes and documents (for example an Obsidian vault) that AI agents keep in order for you. Installs fourteen skills: hsb-init, hsb-doctor, hsb-update, hsb-place-an-item, hsb-projects, hsb-review, hsb-find, hsb-capture, hsb-distill, hsb-create, hsb-share, hsb-restart, hsb-re-organize and hsb-connect.",
   "keywords": [
     "agent-skills",

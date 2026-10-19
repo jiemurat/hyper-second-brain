@@ -4,7 +4,7 @@ description: Decides what is worth keeping in the user's second-brain vault and 
 compatibility: Requires Node.js 18 or newer.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   package: "@jiemurat/hyper-second-brain"
 ---
 
