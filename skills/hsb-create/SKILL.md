@@ -3,7 +3,7 @@ name: hsb-create
 description: Turns the user's saved notes into finished work, prepares focused work on a project, and keeps a "Where I left off" note for each project. Use it when the user asks what to work on or is about to focus on a project, goes offline, ends or resumes a work session on a project, wants help producing a report, presentation, proposal, plan, or event, wants an outline of their notes before writing, keeps asking for more material when a piece should be finished, finishes or shares a piece worth reusing, or brings back feedback on their work. To see where a project stands without working on it, or when the user is stuck on a piece of work, use hsb-find; to start, shrink, or finish a project or review the list, use hsb-projects; to mark or summarize a note, use hsb-distill; to prepare a note for other readers, use hsb-share.
 license: MIT
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   package: "@jiemurat/hyper-second-brain"
 ---
 

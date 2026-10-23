@@ -3,7 +3,7 @@ name: hsb-distill
 description: Marks the main points of the user's notes in layers, so that the gist of each shows at a glance, and summarizes a note. Use it when the user asks to distill, condense, or shorten notes, to bold or highlight their main points or key ideas, to summarize a note or give its gist (also a note named by its subject), to mark the decisions and action items in meeting notes, or to prepare notes for learning a subject or for a piece of work. To find where notes on a subject are or what the vault holds, use hsb-find; to keep the key points of a new article or book, use hsb-capture; to place a note, use hsb-place-an-item; to assemble notes into a draft or a deliverable, use hsb-create; to prepare a note for other readers, use hsb-share.
 license: MIT
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   package: "@jiemurat/hyper-second-brain"
 ---
 

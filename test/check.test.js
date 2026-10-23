@@ -280,6 +280,28 @@ test('project.md that points to a file that does not exist is a failure', () => 
   assert.match(find(r, 'project-rules').message, /RULES-GONE\.md/);
 });
 
+test('a tag standard inside project.md, a named tags.md that is missing, and an unnamed tags.md are warnings', () => {
+  const dir = installedVault();
+  const file = path.join(dir, 'hyper-second-brain', 'project.md');
+  const clean = fs.readFileSync(file, 'utf8');
+  assert.equal(find(check(dir), 'tag-standard'), undefined, 'a project without a standard has no finding');
+  const LINE = '- Tags and links: by hyper-second-brain/tags.md';
+  // the standard inside project.md: a heading of it, or rows that start with a tag
+  fs.writeFileSync(file, clean.replace('- None yet.', `${LINE}\n\n### Tags\n\n| Tag | Meaning |\n|---|---|\n| \`type/moc\` | A map of content |\n`));
+  assert.equal(level(check(dir), 'tag-standard'), 'warn');
+  fs.writeFileSync(file, clean.replace('- None yet.', '- `type/minutes`: the minutes of a meeting\n- `type/transcript`: a transcript\n- `topic/team`: the team'));
+  assert.match(find(check(dir), 'tag-standard').message, /holds a tag standard/);
+  // folder paths and the tags.md line are no standard
+  fs.writeFileSync(file, clean.replace('- None yet.', '- Medical documents: `Areas/Health`\n- Books: `Resources/Books`\n- Receipts: `Areas/Money`'));
+  assert.equal(find(check(dir), 'tag-standard'), undefined);
+  fs.writeFileSync(file, clean.replace('- None yet.', LINE));
+  assert.match(find(check(dir), 'tag-standard').message, /does not exist/);
+  write(dir, 'hyper-second-brain/tags.md', '# Tags and links\n');
+  assert.equal(level(check(dir), 'tag-standard'), 'ok');
+  fs.writeFileSync(file, clean);
+  assert.match(find(check(dir), 'tag-standard').message, /does not name it/);
+});
+
 test('a pointer block twice and a new top-level folder are noticed', () => {
   const dir = installedVault();
   const agents = read(dir, 'AGENTS.md');

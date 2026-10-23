@@ -3,7 +3,7 @@ name: hsb-share
 description: Prepares a copy of the user's note that other people can read, leaving out personal details, and advises when work becomes shared with others. Use it when the user wants to share a note or a folder with a colleague, a team, or a client, to make notes clear to someone who lacks their context, wants feedback on a draft they wrote for others before sending it, or starts working on a project, area, or topic together with other people. To show an early version for feedback or keep the feedback that comes back, use hsb-create; to summarize a note for the user, use hsb-distill; to place a note, use hsb-place-an-item.
 license: MIT
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   package: "@jiemurat/hyper-second-brain"
 ---
 

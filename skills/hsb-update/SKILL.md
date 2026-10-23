@@ -4,7 +4,7 @@ description: Updates hyper-second-brain in a project to the newest version, then
 compatibility: Requires Node.js 18 or newer and npm.
 license: MIT
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   package: "@jiemurat/hyper-second-brain"
 ---
 

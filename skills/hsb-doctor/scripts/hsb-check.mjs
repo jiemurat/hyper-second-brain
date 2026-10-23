@@ -186,6 +186,20 @@ function inspect() {
     else add('project-rules', 'ok', 'the paths in project.md lead to existing files');
   }
 
+  // the tag standard: its own file, which "Lasting choices" names; project.md is read before every vault task, tags.md only when a note gets tags
+  if (project) {
+    const text = readText(projectFile);
+    const tagFile = `${FOLDER}/tags.md`;
+    const hasFile = exists(path.join(folderDir, 'tags.md'));
+    const named = project.lasting.some((l) => l.includes(tagFile));
+    // a heading of the standard, or three table rows or list items that start with a tag such as `type/minutes`
+    const inline = /^#{2,}\s+(Tags|Old tags|Link properties)\s*$/im.test(text) || (text.match(/^(?:\|\s*|[-*]\s+)`#?[a-z0-9_-]+\/[a-z0-9_/-]+`/gm) || []).length >= 3;
+    if (inline) add('tag-standard', 'warn', `project.md holds a tag standard, so every vault task reads it; hsb-connect moves it into ${tagFile}, which is read only when a note gets tags`);
+    else if (named && !hasFile) add('tag-standard', 'warn', `"Lasting choices" in project.md names ${tagFile}, which does not exist; hsb-connect writes it`);
+    else if (hasFile && !named) add('tag-standard', 'warn', `${tagFile} exists, but "Lasting choices" in project.md does not name it, so the skills that create or place notes do not follow it; hsb-connect adds the line`);
+    else if (hasFile) add('tag-standard', 'ok', `the tag standard is in ${tagFile}`);
+  }
+
   // the harness of the project, when there is one
   const harnessCheck = path.join(root, 'pan-harness', 'scripts', 'pan-harness-check.mjs');
   if (exists(harnessCheck)) {

@@ -11,3 +11,7 @@ First version. No migration steps: hsb-init sets a project up at this standard.
 ## 1.0.1
 
 The hsb-restart skill states the ways it offers more clearly. No migration steps.
+
+## 1.0.2
+
+hsb-doctor finds a tag standard written inside project.md and hsb-connect moves it into tags.md; the rules file says when tags.md is opened. No migration steps: hsb-doctor offers the new rules file text.

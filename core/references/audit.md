@@ -26,6 +26,7 @@ Each finding has an id, a level (`ok`, `fail`, `warn`, `info`), and a message. T
 | `pointer-wording:<file>` | The pointer line in an instruction file was translated from an older English wording | Info only: `hsb-update` asks for a new translation |
 | `pointer-twice:<file>` | The pointer block appears more than once | Remove the extra block by hand after showing the user |
 | `project-rules` | `fail`: a path in "Project rules" does not exist. `info`: the project has rule files and "Project rules" records none. `ok`: the paths exist | Broken path: show it and ask whether the file moved (fix the path) or the rule is gone (remove the line). Not recorded: offer to record them, and on a yes follow `references/project-rules.md` |
+| `tag-standard` | `warn`: `project.md` holds a tag standard (every vault task reads `project.md`, `tags.md` only when a note gets tags), "Lasting choices" names `hyper-second-brain/tags.md` and the file is missing, or the file exists and "Lasting choices" does not name it. `ok`: the standard is in `tags.md`. No finding: the vault has no standard | Offer `hsb-connect`: it moves the standard into `tags.md`, writes the missing file, or adds the line. Change neither file yourself |
 | `harness` | The project's own pan-harness check reports errors | Report them; the harness is not this package's to repair |
 | `skills` | Whether the hsb-* skills are installed in the project | Info only |
 

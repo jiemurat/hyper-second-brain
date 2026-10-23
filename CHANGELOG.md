@@ -26,3 +26,11 @@ Released 2026-10-19.
 
 - `hsb-restart`: when the user calls the vault a chaos or a mess without asking to start over, it offers the ways in one message, each with what it asks of the user and what it changes in the vault; for a vault that already follows PARA (each category's folder exists) one way leaves the vault as it is and works from the Project List. When the user picks none, it changes nothing, does not ask about the ways again, and offers a review that is due.
 - The README shows the npm version, monthly downloads, license and CI status as badges at the top.
+
+## 1.0.2
+
+Released 2026-10-23.
+
+- `hsb-doctor` warns when `project.md` holds a tag standard (every vault task reads `project.md`), when "Lasting choices" names `hyper-second-brain/tags.md` and the file is missing, and when the file exists but "Lasting choices" does not name it; it offers `hsb-connect`.
+- `hsb-connect` takes a tag standard written inside `project.md` as agreed: it writes `tags.md` from it, asks only what it lacks, and removes it from `project.md` on the user's yes.
+- `HYPER-SECOND-BRAIN.md` says that `tags.md` is opened when a note is created or placed, and that a tagged note that moves needs only its new folder's `up`. A project whose rules file came from 1.0.1 sees the difference in `hsb-doctor` and takes the new text on its yes.

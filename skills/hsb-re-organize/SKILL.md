@@ -4,7 +4,7 @@ description: Reorganizes the user's whole second-brain vault into the PARA struc
 compatibility: Requires Node.js 18 or newer.
 license: MIT
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   package: "@jiemurat/hyper-second-brain"
 ---
 
